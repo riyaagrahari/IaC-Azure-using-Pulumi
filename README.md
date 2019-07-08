@@ -6,6 +6,6 @@ Pulumi has a cloud object model along with its evalution runtime that automatica
 
 Pulumi's use of general purpose languages for code, allows us to use the concepts of abstraction, modularity (reuse by help of methods and classes), inheritance, libraries, toolability (access to IDEs, refactoring, static analysis etc.) , testing etc.
 ## License
-This project is licensed under the  License - see the [`LICENSE.md`](https://github.com/riyaagrahari/ARM-Templates/blob/master/LICENSE) file for details
+This project is licensed under the  License - see the [`LICENSE.md`](https://github.com/riyaagrahari/Pulumi-Azure/blob/master/LICENSE) file for details
 ## Author
 [`Riya Agrahari`](https://github.com/riyaagrahari/)<br>
