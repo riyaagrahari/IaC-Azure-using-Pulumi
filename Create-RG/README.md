@@ -1,7 +1,7 @@
 # Pulumi-js Code to Create a Resource Group in Azure
 This script creates a Resource Group at specified region in Microsoft Azure.
 
-For default values , you may refer to [`index.js`](https://github.com/riyaagrahari/Pulumi-Azure/blob/master/Create-Vnet/index.js) file. Values are passed as parameter in the function. Change it there as desired.
+For default values , you may refer to [`index.js`](https://github.com/riyaagrahari/Pulumi-Azure/blob/master/Create-RG/index.js) file. Values are passed as parameter in the function. Change it there as desired.
 
 # Installation
 
@@ -26,17 +26,17 @@ Note: If Azure CLI is working on your local system , skip this step
 $ mkdir <folder name> && cd <folder name>
 $ pulumi new azure-javascript
 ```
-Note: If ```pulumi new``` is being used for the first time, you will be asked to login to [`Pulumi Cloud Console`](https://app.pulumi.com/). Sign up and Login there using Azure Credentials.
+ Note: If ```pulumi new``` is being used for the first time, you will be asked to login to [`Pulumi Cloud Console`] (https://app.pulumi.com/). Sign up and Login there using Azure Credentials.
 
-It will ask for project name and stack name. Change it as desired or to use default just press Enter.
+ It will ask for project name and stack name. Change it as desired or to use default just press Enter.
 
-It will generate some project files in your current folder which are as follows: <br />
+ It will generate some project files in your current folder which are as follows: <br />
 - ```Pulumi.yaml``` which defines your project.<br />
 
 - ```Pulumi.dev.yaml``` which contains stack configuration values.<br />
 
 - ```index.js``` which defines your stack resources.
-- Download the JavaScript files in the folder [`Create-Vnet`](https://github.com/riyaagrahari/Pulumi-Azure/tree/master/Create-Vnet), paste and replace it in your current folder where Pulumi project is initiated.
+- Download the JavaScript files of the folder [`Create-RG`](https://github.com/riyaagrahari/Pulumi-Azure/tree/master/Create-RG), paste and replace it in your current folder where Pulumi project is initiated.
 - Deploy the Stack using following command
  ```bash
 $ pulumi up
