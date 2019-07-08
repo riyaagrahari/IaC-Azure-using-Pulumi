@@ -32,11 +32,7 @@ class VirtualNetwork {
                 {
                     addressPrefix: subAddr4,
                     name: subname4,
-                },
-                {
-                    addressPrefix: subAddr5,
-                    name: "AzureFirewallSubnet",
-                },
+                }
             ],
 
             });
