@@ -1,0 +1,3 @@
+name: Create-Vnet-NSG-Subnet
+runtime: nodejs
+description: A minimal Azure JavaScript Pulumi program
