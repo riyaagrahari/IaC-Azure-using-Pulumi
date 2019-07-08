@@ -33,7 +33,7 @@ Below is the architectural diagram for disaster recovery solution developed wher
 </p>
 <br /><br />
 
-## Installation
+# Installation
 
 - Install <b>Pulumi package</b> for your respective Operating System and setup Pulumi CLI. (Refer [`Download Pulumi`](https://www.pulumi.com/docs/reference/install/) )
 
@@ -58,9 +58,9 @@ $ pulumi new azure-javascript
 ```
 Note: If ```pulumi new``` is being used for the first time, you will be asked to login to [`Pulumi Cloud Console`](https://app.pulumi.com/). Sign up and Login there using Azure Credentials.
 It will ask for project name and stack name. Change it as desired or to use default just press Enter.
-It will generate some project files in your folder<br \>
-```Pulumi.yaml``` which defines your project.<br \>
-```Pulumi.dev.yaml``` which contains stack configuration values.<br \>
+It will generate some project files in your folder<br />
+```Pulumi.yaml``` which defines your project.<br />
+```Pulumi.dev.yaml``` which contains stack configuration values.<br />
 ```index.js``` which defines your stack resources.
 - Download the files in the folder [`Create-Vnet-NSG-Subnet`](https://github.com/riyaagrahari/Pulumi-Azure/tree/master/Create-Vnet-NSG-Subnet)
 - Deploy the Stack using following command
