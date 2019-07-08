@@ -60,6 +60,6 @@ const virtualnet = vnetobj.VirtualNetworkCreate(vnet1Name,azureResourceGroup.loc
 const virtualNetworkReplica = vnetobj.VirtualNetworkCreate(vnet2Name,azureResourceGroup2.location,vnet2IP,azureResourceGroup2.resourceGroupName,subnet1IPReplica,subnet2IPReplica,subnet3IPReplica,ManagementJumpboxIPReplica,FirewallIPReplica,subnet1NameReplica,subnet2NameReplica,subnet3NameReplica,ManagementJumpboxNameReplica,nsgReplica[1].id,nsgReplica[2].id,nsgReplica[3].id);
 
 const peeringobj = new peering.VirtualNetworkPeering();
-const peering1 = peeringobj.VnetPeering(virtualnet.id,virtualnet.name,virtualNetworkReplica.id,virtualNetworkReplica.name,azureResourceGroup.resourceGroupName,azureResourceGroup2.resourceGroupName);
+const peeringConnection = peeringobj.VnetPeering(virtualnet.id,virtualnet.name,virtualNetworkReplica.id,virtualNetworkReplica.name,azureResourceGroup.resourceGroupName,azureResourceGroup2.resourceGroupName);
 
 
