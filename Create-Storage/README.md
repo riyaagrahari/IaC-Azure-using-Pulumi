@@ -1,5 +1,5 @@
 # Pulumi-js Code to Create Virtual Network with Multiple Subnets
-This script creates a Virtual Network with three subnets in Microsoft Azure.
+This script creates a Storage Account in a Resource Group in Microsoft Azure.
 
 For default values , you may refer to [`index.js`](https://github.com/riyaagrahari/Pulumi-Azure/blob/master/Create-Vnet/index.js) file. Variables are declared and initialized with default values.
 
@@ -38,7 +38,7 @@ It will generate some project files in your current folder which are as follows:
 - ```Pulumi.dev.yaml``` which contains stack configuration values.<br />
 
 - ```index.js``` which defines your stack resources.
-- Download the JavaScript files in the folder [`Create-Vnet`](https://github.com/riyaagrahari/Pulumi-Azure/tree/master/Create-Vnet), paste and replace it in your current folder where Pulumi project is initiated.
+- Download the JavaScript files in the folder [`Create-Storage`](https://github.com/riyaagrahari/Pulumi-Azure/tree/master/Create-Storage), paste and replace it in your current folder where Pulumi project is initiated.
 - Deploy the Stack using following command
  ```bash
 $ pulumi up
