@@ -1,3 +1,0 @@
-name: Pulumi-Azure
-runtime: nodejs
-description: A minimal Azure JavaScript Pulumi program

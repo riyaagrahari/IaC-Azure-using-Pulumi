@@ -1,3 +1,0 @@
-name: Create-Storage
-runtime: nodejs
-description: A minimal Azure JavaScript Pulumi program
