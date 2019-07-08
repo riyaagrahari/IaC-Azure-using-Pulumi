@@ -1,9 +1,8 @@
 # IaC using Pulumi 
 
 <p align="center">
-<img src="./WEB-API-DB.jpeg">
+<img src="./pulumi.png">
 <br />
-    <b> Figure 1.1: Three Tier Architecture </b>  
 </p>
 
 
