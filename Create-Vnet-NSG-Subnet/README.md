@@ -57,8 +57,10 @@ $ mkdir <folder name> && cd <folder name>
 $ pulumi new azure-javascript
 ```
 Note: If ```pulumi new``` is being used for the first time, you will be asked to login to [`Pulumi Cloud Console`](https://app.pulumi.com/). Sign up and Login there using Azure Credentials.
+
 It will ask for project name and stack name. Change it as desired or to use default just press Enter.
-It will generate some project files in your folder<br />
+
+It will generate some project files in your current folder which are as follows: <br />
 ```Pulumi.yaml``` which defines your project.<br />
 
 ```Pulumi.dev.yaml``` which contains stack configuration values.<br />
