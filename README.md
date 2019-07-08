@@ -1,4 +1,4 @@
-# Pulumi for Azure
+# Pulumi -An IaC Tool
 Pulumi is an open source cloud development tool. It can be used to develope and configure resources on any cloud by coding infrastructure with choice of multiple languages like Python 3, Node.js - Javascript and Typescript, Go etc.
 Pulumi is multi-cloud as well as it is supported on AWS, Azure and GCP clouds along with Kubernetes for any public, private or hybrid cloud. <br />
 
