@@ -35,66 +35,39 @@ Below is the architectural diagram for disaster recovery solution developed wher
 
 ## Installation
 
-## Three ways of execution:
+- Install <b>Pulumi package</b> for your respective Operating System and setup Pulumi CLI. (Refer [`Download Pulumi`](https://www.pulumi.com/docs/reference/install/) )
 
-### 1. Azure Portal 
-<br />
-<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Friyaagrahari%2FARM-Templates%2Fmaster%2FNestedTemplate_for_DisasterRecovery%2FMaster.json" target="_blank">
-    <img src="http://azuredeploy.net/deploybutton.png"/>
-</a>
-<a href="http://armviz.io/#/?load=https%3A%2F%2Fraw.githubusercontent.com%2Friyaagrahari%2FAzure-Templates%2Fmaster%2FNestedTemplate_for_DisasterRecovery%2FMaster.json" target="_blank">
-    <img src="http://armviz.io/visualizebutton.png"/>
-</a>
-<br />
+- After Installation, verify pulumi is installed or not by using
+ ```bash
+$ pulumi version
+```
+- Install Node.js (Refer [`Download Node.js`](https://nodejs.org/en/download/) )<br />
 
-- Click on Deploy to Azure button for deploying the template directly to Azure Portal.Fill in the required parameters you want for deploying your template.<br/>
-- Click on Visualize button for viewing the template and design in armviz.io.<br />
+- Install <b>Pulumi with Node.js</b> <br/>
+ Install using npm to use pulumi from JavaScript or TypeScript in Node.js
+ ```bash
+$ npm install @pulumi/azure
+```
+- Configure Azure (Refer [`Azure Configuration`](https://www.pulumi.com/docs/reference/clouds/azure/setup/) )
+Note: If Azure CLI is working on your local system , skip this step 
 
-### 2. Azure CLI 
-<br />
-<a href="https://shell.azure.com" target="_blank">
- <img name="launch-cloud-shell" src="https://docs.microsoft.com/azure/includes/media/cloud-shell-try-it/launchcloudshell.png" data-linktype="external">
-</a>
-<br />
-
-- Click on the Launch Cloud Shell button,login with Azure credentials and select Bash shell there to open Azure CLI.
-- Upload template file using upload option on Azure CLI portal.<br />
-- Use following Azure CLI command to execute template.
-
-```bash
-az group deployment create --resource-group <Resource Group Name> --template-file template.json
+- Create a New Project
+ ```bash
+$ mkdir <folder name> && cd <folder name>
+$ pulumi new azure-javascript
+```
+Note: If ```pulumi new``` is being used for the first time, you will be asked to login to [`Pulumi Cloud Console`](https://app.pulumi.com/). Sign up and Login there using Azure Credentials.
+It will ask for project name and stack name. Change it as desired or to use default just press Enter.
+It will generate some project files in your folder<br \>
+```Pulumi.yaml``` which defines your project.<br \>
+```Pulumi.dev.yaml``` which contains stack configuration values.<br \>
+```index.js``` which defines your stack resources.
+- Download the files in the folder [`Create-Vnet-NSG-Subnet`](https://github.com/riyaagrahari/Pulumi-Azure/tree/master/Create-Vnet-NSG-Subnet)
+- Deploy the Stack using following command
+ ```bash
+$ pulumi up
 ```
 
-### 3. Azure Powershell Commands
-<br />
-<a href="https://shell.azure.com" target="_blank">
- <img name="launch-cloud-shell" src="https://docs.microsoft.com/azure/includes/media/cloud-shell-try-it/launchcloudshell.png" data-linktype="external">
-</a>
-<br />
-
-- Click on the Launch Cloud Shell button, login with Azure credentials and you will be redirected to powershell portal.
-- Upload template file using upload option, change current directory to home directory of azure user as it is default folder for storing  uploaded files(use cd).<br />
-- Use following Azure Powershell Command to execute template.
-
-```bash
-New-AzResourceGroupDeployment -ResourceGroupName <Resource Group Name> -TemplateFile template.json
-```
-### 4. Terraform:
-<br />
-<a href="https://shell.azure.com" target="_blank">
- <img name="launch-cloud-shell" src="https://docs.microsoft.com/azure/includes/media/cloud-shell-try-it/launchcloudshell.png" data-linktype="external">
-</a>
-</br>
-
-Terraform can be used for deploying ARM templates. 
-- Use [`Master.tf`](https://github.com/riyaagrahari/ARM-Templates/blob/master/NestedTemplate_for_DisasterRecovery/Master.tf) to deploy resources on Azure using terraform.At the end of this file, there is a parameter section, you can change the values to your desired parameter values. 
-- Upload [`Master.json`](https://github.com/riyaagrahari/ARM-Templates/blob/master/NestedTemplate_for_DisasterRecovery/Master.json) ARM template so that Terraform can perform operation using it. 
-- Configure Terraform [`configuring Terraform`](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/terraform-install-configure) if you are using Azure CLI on your local machine.
-- Deploy your template using following commands:
-
-    - ```terraform init ```
-    - ```terraform plan ``` 
-    - ```terraform apply```
 ## License
 This project is licensed under the  License - see the [`LICENSE.md`](https://github.com/riyaagrahari/ARM-Templates/blob/master/LICENSE) file for details
 ## Author
