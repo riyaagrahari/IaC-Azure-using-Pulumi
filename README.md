@@ -1,5 +1,11 @@
 # IaC using Pulumi 
-![pulumi](https://user-images.githubusercontent.com/24872414/60827541-10480100-a1ce-11e9-9fe3-9681ea7e985a.png) 
+
+<p align="center">
+<img src="./WEB-API-DB.jpeg">
+<br />
+    <b> Figure 1.1: Three Tier Architecture </b>  
+</p>
+
 
 Pulumi is an open source cloud development tool. It can be used to develope and configure resources on any cloud by coding infrastructure with choice of multiple languages like Python 3, Node.js - Javascript and Typescript, Go etc.
 Pulumi is multi-cloud as well as it is supported on AWS, Azure and GCP clouds along with Kubernetes for any public, private or hybrid cloud. <br />
