@@ -67,7 +67,7 @@ It will generate some project files in your current folder which are as follows:
 
 - ```index.js``` which defines your stack resources.
 # Usage
-Aftre creating a new project and stack in Pulumi using ```pulumi new azure```<br />
+After creating a new project and stack in Pulumi using ```pulumi new azure-javascript```<br />
 
 
 - Download the JavaScript files in the folder [`Create-Vnet-NSG-Subnet`](https://github.com/riyaagrahari/Pulumi-Azure/tree/master/Create-Vnet-NSG-Subnet), paste and replace it in your current folder where Pulumi project is initiated.
@@ -84,6 +84,7 @@ Aftre creating a new project and stack in Pulumi using ```pulumi new azure```<br
  ```bash
 $ pulumi up
 ```
+- ```index.js``` will execute and all other Linked Templates will be called
 
 ## License
 This project is licensed under the  License - see the [`LICENSE.md`](https://github.com/riyaagrahari/ARM-Templates/blob/master/LICENSE) file for details
