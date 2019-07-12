@@ -6,7 +6,7 @@
  
 This script creates a Resource Group at a specified region.
 
-For default values , you may refer to [`index.js`](https://github.com/riyaagrahari/Pulumi-Azure/blob/master/Create-RG/index.js) file. Values are passed as parameter in the function. Change it there as desired.
+For default values , you may refer to [`index.js`](https://github.com/riyaagrahari/IaC-Azure-using-Pulumi/blob/master/Create-RG/index.js) file. Values are passed as parameter in the function. Change it there as desired.
 
 ## Installation
 
@@ -41,6 +41,10 @@ $ pulumi new azure-javascript
 - ```Pulumi.dev.yaml``` which contains stack configuration values.<br />
 
 - ```index.js``` which defines your stack resources.
+
+## Usage
+After creating a new project and stack in Pulumi using ```pulumi new azure-javascript```<br />
+
 - Download the JavaScript files of the folder [`Create-RG`](https://github.com/riyaagrahari/Pulumi-Azure/tree/master/Create-RG), paste and replace it in your current folder where Pulumi project is initiated.
 - Deploy the Stack using following command
  ```bash
