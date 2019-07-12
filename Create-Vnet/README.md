@@ -38,12 +38,13 @@ It will generate some project files in your current folder which are as follows:
 - ```Pulumi.dev.yaml``` which contains stack configuration values.<br />
 
 - ```index.js``` which defines your stack resources.
+
+## Usage
 - Download the JavaScript files in the folder [`Create-Vnet`](https://github.com/riyaagrahari/Pulumi-Azure/tree/master/Create-Vnet), paste and replace it in your current folder where Pulumi project is initiated.
 - Deploy the Stack using following command
  ```bash
 $ pulumi up
 ```
-
 ## License
 This project is licensed under the  License - see the [`LICENSE.md`](https://github.com/riyaagrahari/ARM-Templates/blob/master/LICENSE) file for details
 ## Author
