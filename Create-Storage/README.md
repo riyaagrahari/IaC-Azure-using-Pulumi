@@ -1,4 +1,4 @@
-# Pulumi-js Code to Create Storage Account in Azure
+# Storage Account in Azure using Pulumi-js
 This script creates a Storage Account in a Resource Group of Microsoft Azure.
 
 For default values , you may refer to [`index.js`](https://github.com/riyaagrahari/Pulumi-Azure/blob/master/Create-Storage/index.js) file. Variables are declared and initialized with default values.
