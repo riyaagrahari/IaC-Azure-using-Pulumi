@@ -1,4 +1,4 @@
-# Pulumi-js Code to Create Virtual Network with Multiple Subnets
+# Create Virtual Network with Multiple Subnets using Pulumi-js
 This script creates a Virtual Network with three subnets in Microsoft Azure.
 
 For default values , you may refer to [`index.js`](https://github.com/riyaagrahari/Pulumi-Azure/blob/master/Create-Vnet/index.js) file. Variables are declared and initialized with default values.
