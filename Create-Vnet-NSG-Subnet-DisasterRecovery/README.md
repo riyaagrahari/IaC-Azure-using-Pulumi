@@ -24,7 +24,7 @@ Below is the Architectural Diagram for the primary VNets and subnets which are c
 Replica of the primary vnet with its subnets and NSGs are created at some secondary location which comes up as recovery solution in case of a disaster. Communication between these Vnets is established using global peering.
 
 In case of disaster, rules of NSG are appended opening custom ports on both Vnet, allowing database synchronization from secondary to primary region.<br />
-Below is the architectural diagram for disaster recovery solution developed where a replica secondary vnet is created and peering is established between them
+Below is the architectural diagram for disaster recovery solution developed where a replica secondary vnet is created and peering is established between them.
 
 <p align="center">
 <img src="./Architecture-DisasterRecovery.jpg">
@@ -66,7 +66,13 @@ It will generate some project files in your current folder which are as follows:
 - ```Pulumi.dev.yaml``` which contains stack configuration values.<br />
 
 - ```index.js``` which defines your stack resources.
+# Usage
+Aftre creating a new project and stack in Pulumi using ```pulumi new```<br />
+
+
 - Download the JavaScript files in the folder [`Create-Vnet-NSG-Subnet`](https://github.com/riyaagrahari/Pulumi-Azure/tree/master/Create-Vnet-NSG-Subnet), paste and replace it in your current folder where Pulumi project is initiated.
+- ```index.js``` is the master template which calls all other templates in it.
+- 
 - Deploy the Stack using following command
  ```bash
 $ pulumi up

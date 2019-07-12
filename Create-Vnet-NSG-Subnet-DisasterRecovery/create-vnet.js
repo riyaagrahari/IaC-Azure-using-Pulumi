@@ -41,9 +41,7 @@ constructor(){
                     name: "AzureFirewallSubnet",
                 },
             ],
-
             });
             return testVirtualNetwork;
-        }
-    }
+        }}
 module.exports.VirtualNetwork = VirtualNetwork;
