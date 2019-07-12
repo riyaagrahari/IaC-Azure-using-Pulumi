@@ -5,7 +5,7 @@ For default values , you may refer to [`index.js`](https://github.com/riyaagraha
 
 You can give your own values by changing the entries.
 
-# Installation
+## Installation
 
 - Install <b>Pulumi package</b> for your respective Operating System and setup Pulumi CLI. (Refer [`Download Pulumi`](https://www.pulumi.com/docs/reference/install/) )
 
