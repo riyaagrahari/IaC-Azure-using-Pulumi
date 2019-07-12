@@ -50,7 +50,7 @@ After creating a new project and stack in Pulumi using ```pulumi new azure-javas
  ```bash
 $ pulumi up
 ```
-
+- [`index.js`](https://github.com/riyaagrahari/IaC-Azure-using-Pulumi/blob/master/Create-RG/index.js) contains the logic for creation of a Resource Group in particular location
 ## License
 This project is licensed under the  License - see the [`LICENSE.md`](https://github.com/riyaagrahari/ARM-Templates/blob/master/LICENSE) file for details
 ## Author
