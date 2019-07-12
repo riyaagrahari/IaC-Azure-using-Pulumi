@@ -33,7 +33,7 @@ Below is the architectural diagram for disaster recovery solution developed wher
 </p>
 <br /><br />
 
-# Installation
+## Installation
 
 - Install <b>Pulumi package</b> for your respective Operating System and setup Pulumi CLI. (Refer [`Download Pulumi`](https://www.pulumi.com/docs/reference/install/) )
 
@@ -66,7 +66,7 @@ It will generate some project files in your current folder which are as follows:
 - ```Pulumi.dev.yaml``` which contains stack configuration values.<br />
 
 - ```index.js``` which defines your stack resources.
-# Usage
+## Usage
 After creating a new project and stack in Pulumi using ```pulumi new azure-javascript```<br />
 
 
