@@ -10,7 +10,7 @@ Web-API-Database is a 3 tier architecture which decouples to presentation, busin
 </p>
 
 <br /><br />
-This template creates a Virtual Network with 3 subnets (Webserver, API, Database). Further, Network Security Group are created for each and Inbound, Outbound rules are added to their respective NSG.
+This template creates a Virtual Network with 3 subnets (Webserver, API, Database). Further, Network Security Group are created for each and Inbound, Outbound rules are added to their respective NSG limiting traffic as Web-subnet acts as un-trusted network, DB-Subnet acts as semi-trusted network and API-subnet acts as fully-trusted network.
 For default values , you may refer to [`index.json`](https://github.com/riyaagrahari/Pulumi-Azure/blob/master/Create-Vnet-NSG-Subnet/index.js) file.
 
 Below is the Architectural Diagram for the primary VNets and subnets which are created and network security rules are applied to subnets using NSG.
@@ -69,7 +69,6 @@ It will generate some project files in your current folder which are as follows:
 - ```index.js``` which defines your stack resources.
 ## Usage
 After creating a new project and stack in Pulumi using ```pulumi new azure-javascript```<br />
-
 
 - Download the JavaScript files in the folder [`Create-Vnet-NSG-Subnet`](https://github.com/riyaagrahari/Pulumi-Azure/tree/master/Create-Vnet-NSG-Subnet), paste and replace it in your current folder where Pulumi project is initiated.
 - [`index.js`](https://github.com/riyaagrahari/IaC-using-Pulumi/blob/master/Create-Vnet-NSG-Subnet-DisasterRecovery/index.js) is the master template which calls all other templates in it.
