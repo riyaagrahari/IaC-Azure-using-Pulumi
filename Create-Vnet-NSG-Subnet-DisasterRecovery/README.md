@@ -67,12 +67,19 @@ It will generate some project files in your current folder which are as follows:
 
 - ```index.js``` which defines your stack resources.
 # Usage
-Aftre creating a new project and stack in Pulumi using ```pulumi new```<br />
+Aftre creating a new project and stack in Pulumi using ```pulumi new azure```<br />
 
 
 - Download the JavaScript files in the folder [`Create-Vnet-NSG-Subnet`](https://github.com/riyaagrahari/Pulumi-Azure/tree/master/Create-Vnet-NSG-Subnet), paste and replace it in your current folder where Pulumi project is initiated.
-- ```index.js``` is the master template which calls all other templates in it.
-- 
+- [`index.js`](https://github.com/riyaagrahari/IaC-using-Pulumi/blob/master/Create-Vnet-NSG-Subnet-DisasterRecovery/index.js) is the master template which calls all other templates in it.
+```index.js``` executes first and calls the follwing linked templates:
+
+-[`create-rg.js`](https://github.com/riyaagrahari/IaC-using-Pulumi/blob/master/Create-Vnet-NSG-Subnet-DisasterRecovery/create-rg.js)is the Resource Group Creation Template in a particular location. 
+
+- [`create-nsg.js`](https://github.com/riyaagrahari/IaC-using-Pulumi/blob/master/Create-Vnet-NSG-Subnet-DisasterRecovery/create-nsg.js) is the Network Security Group Creation template which creates 3 NSG- WEB, API, DB which have their own inbound and outbound rules for traffic control.
+
+- [`create-peering.js`]https://github.com/riyaagrahari/IaC-using-Pulumi/blob/master/Create-Vnet-NSG-Subnet-DisasterRecovery/create-peering.js) is used for creating peering from Primary to Secondary VNet and Secondary to Primary VNet.
+
 - Deploy the Stack using following command
  ```bash
 $ pulumi up
