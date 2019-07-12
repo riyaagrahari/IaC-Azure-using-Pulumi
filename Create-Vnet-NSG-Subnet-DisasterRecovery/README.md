@@ -78,7 +78,7 @@ After creating a new project and stack in Pulumi using ```pulumi new azure-javas
 
 - [`create-nsg.js`](https://github.com/riyaagrahari/IaC-using-Pulumi/blob/master/Create-Vnet-NSG-Subnet-DisasterRecovery/create-nsg.js) is the Network Security Group Creation template which creates 3 NSG- WEB, API, DB which have their own inbound and outbound rules for traffic control.
 
-- [`create-peering.js`](https://github.com/riyaagrahari/IaC-using-Pulumi/blob/master/Create-Vnet-NSG-Subnet-DisasterRecovery/create-peering.js) is used for creating peering from Primary to Secondary VNet and Secondary to Primary VNet.
+- [`create-peering.js`](https://github.com/riyaagrahari/IaC-using-Pulumi/blob/master/Create-Vnet-NSG-Subnet-DisasterRecovery/create-peering.js) is used for creating peering from Primary to Secondary Virtual Network and Secondary to Primary Virtual Network.
 
 - Deploy the Stack using following command
  ```bash
