@@ -84,7 +84,6 @@ After creating a new project and stack in Pulumi using ```pulumi new azure-javas
  ```bash
 $ pulumi up
 ```
-- ```index.js``` will execute and all other Linked Templates will be called
 
 ## License
 This project is licensed under the  License - see the [`LICENSE.md`](https://github.com/riyaagrahari/ARM-Templates/blob/master/LICENSE) file for details
