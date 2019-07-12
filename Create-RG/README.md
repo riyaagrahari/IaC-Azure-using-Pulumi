@@ -1,4 +1,4 @@
-# Pulumi-js Code to Create a Resource Group in Azure
+# Resource Group in Azure using Pulumi-js
 This script creates a Resource Group at a specified region.
 
 For default values , you may refer to [`index.js`](https://github.com/riyaagrahari/Pulumi-Azure/blob/master/Create-RG/index.js) file. Values are passed as parameter in the function. Change it there as desired.
