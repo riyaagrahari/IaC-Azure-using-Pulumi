@@ -44,7 +44,7 @@ $ pulumi version
 - Install Node.js (Refer [`Download Node.js`](https://nodejs.org/en/download/) )<br />
 
 - Install <b>Pulumi with Node.js</b> <br/>
- (Note: Make sure to install all npm dependency before using the following command)
+ (Note: Make sure to install all npm dependency before using the following command)<br />
  Install using npm to use pulumi from JavaScript or TypeScript in Node.js
  ```bash
 $ npm install @pulumi/azure
