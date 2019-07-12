@@ -1,4 +1,4 @@
-# IaC using Pulumi 
+# IaC in Azure using Pulumi 
 
 <p align="center">
 <img src="./pulumi.png">
