@@ -3,7 +3,7 @@ Azure Storage, a durable, scalable, managed, secure and highly available service
 Srorage Account has four major storage systems - Blobs, Files, Queues, Tables.
 <br><br>
 <p align="center">
-<img src="./Diagrams/Storage-Account.png" height="350" width="400">
+<img src="./Diagrams/Storage-Account.png" height="350" width="500">
     
 <br />
     <b> Figure 1.1: Storage System in Storage Account </b>  
