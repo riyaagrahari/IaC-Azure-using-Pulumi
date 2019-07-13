@@ -1,6 +1,6 @@
 # Create Resource Group in Azure using Pulumi-js
 <p align="center">
-<img src="./rg.png" height="200" width="400">
+<img src="./Diagrams/rg.png" height="200" width="400">
 <br />
 </p>
  
