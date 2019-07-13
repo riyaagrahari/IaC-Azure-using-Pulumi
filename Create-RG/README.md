@@ -3,7 +3,11 @@
 <img src="./Diagrams/rg.png" height="200" width="400">
 <br />
 </p>
-Resource Groups can be understood as a logical container having a group of related resources. These resources are grouped together so that they can be managed as a single unit. Resources are allocated in a Resource Group based on the needs of an organization, for instance a Resource Group may contain resources with similar life cycle, so that they can be created and/or deleted together.
+
+Resource Groups can be understood as a logical container having a group of related resources. These resources are grouped together so that they can be managed as a single unit. 
+
+Resources are allocated in a Resource Group based on the needs of an organization, for instance a Resource Group may contain resources with similar life cycle, so that they can be created and/or deleted together.
+
 This script creates a Resource Group at a specified region.
 
 For default values , you may refer to [`index.js`](https://github.com/riyaagrahari/IaC-Azure-using-Pulumi/blob/master/Create-RG/index.js) file. Values are passed as parameter in the function. Change it there as desired.
