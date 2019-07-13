@@ -1,4 +1,5 @@
 # Storage Account in Azure using Pulumi-js
+Azure Storage, a durable, scalable, managed, secure and highly available service provided by Microsoft that supports scalable object data, cloud file system, reliable messaging and NoSQL store for storing unstructured data.
 
 This script creates a Storage Account in a Resource Group of Microsoft Azure.
 
