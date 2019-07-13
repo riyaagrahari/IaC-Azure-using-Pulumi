@@ -3,9 +3,9 @@ Azure Storage, a durable, scalable, managed, secure and highly available service
 Srorage Account has four major storage systems - Blobs, Files, Queues, Tables.
 
 <p align="center">
-<img src="./Diagrams/Storage-Account.jpeg" height="450" width="300">
+<img src="./Diagrams/Storage-Account.png" height="450" width="300">
 <br />
-    <b> Figure 1.1: Three Tier Architecture </b>  
+    <b> Figure 1.1: Storage Account Types </b>  
 </p>
 
 This script creates a Storage Account in a Resource Group of Microsoft Azure.
