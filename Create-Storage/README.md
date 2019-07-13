@@ -2,7 +2,7 @@
 Azure Storage, a durable, scalable, managed, secure and highly available service provided by Microsoft that supports scalable object data, cloud file system, reliable messaging and NoSQL store for storing unstructured data.
 Srorage Account has four major storage systems - Blobs, Files, Queues, Tables.
 
-<p align="center">
+<p align="center" height=200 width=200>
 <img src="./Diagrams/Storage-Account.png" height="450" width="300">
 <br />
     <b> Figure 1.1: Storage System in Storage Account </b>  
