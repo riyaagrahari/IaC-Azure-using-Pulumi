@@ -87,7 +87,7 @@ $ pulumi up
 ## Result
 Result of the deployed resources can be viewed on [`Pulumi`](https://app.pulumi.com)
 <p align="center">
-<img src="./Diagrams/Result.jpg" height="450" width="300">
+<img src="./Diagrams/Result.JPG" height="450" width="300">
 <br />
     <b> Figure 1.1: Resource Graph of Resources Deployed </b>  
 </p>
