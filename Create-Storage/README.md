@@ -57,7 +57,10 @@ $ pulumi up
 After creating a new project and stack in Pulumi using ```pulumi new azure-javascript```<br />
 
 
-- Download the JavaScript files in the folder [`Create-Vnet-NSG-Subnet`](https://github.com/riyaagrahari/Pulumi-Azure/tree/master/Create-Vnet-NSG-Subnet), paste and replace it in your current folder where Pulumi project is initiated.
+- Download the JavaScript files in the folder [`Create-Vnet-NSG-Subnet`](https://github.com/riyaagrahari/Pulumi-Azure/tree/master/Create-Vnet-NSG-Subnet), paste and replace it in your current folder where Pulumi project is initiated. Add azure-storage dependency in package.json (Refer [`package.json`](https://github.com/riyaagrahari/IaC-Azure-using-Pulumi/blob/master/Create-Storage/package.json) ). Install azure-storage package using the command: 
+```bash
+$ npm install azure-storage
+```
 - [`index.js`](https://github.com/riyaagrahari/IaC-using-Pulumi/blob/master/Create-Vnet-NSG-Subnet-DisasterRecovery/index.js) is the master template which calls all other templates in it.
 ```index.js``` executes first and calls the follwing linked templates:
 
