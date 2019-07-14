@@ -93,11 +93,13 @@ Result of the deployed resources can be viewed on [`Pulumi`](https://app.pulumi.
 </p>
 
 ## Update existing NSG Rule
-In case of disaster, rules of NSG for Database Subnet are appended opening custom ports on both Vnet, allowing database synchronization from secondary to primary region.
+Rules of NSG for Database Subnet are appended opening custom ports on both Vnet, allowing database synchronization from between primary and secondary Databases.
 
 This can be done by loading the [`powershell.ps1`](https://github.com/riyaagrahari/IaC-Azure-using-Pulumi/blob/master/Create-Vnet-NSG-Subnet-DisasterRecovery/powershell.ps1) on the Azure powershell.
 
 Change the values of Resource Group and NSG for database primary and secondary Subnet as per your existing resources , Upload the powershell script, ```cd``` to get into your home directory then run the powershell script.
+
+So if Disaster occures, recovery can be made by backed up data from seconadary to primary Database.
 
 ## License
 
