@@ -5,7 +5,7 @@ const pulumi = require("@pulumi/pulumi");
 
 class VirtualNetwork {
     VirtualNetwork(){}
-    VirtualNetworkcreate(vNetName,location,Vnetaddr,rgName,subAddr1,subAddr2,subAddr3,subAddr4,subAddr5,subname1,subname2,subname3,subname4)
+    VirtualNetworkcreate(vNetName,location,Vnetaddr,rgName,subAddr1,subAddr2,subAddr3,subAddr4,subname1,subname2,subname3,subname4)
     {
          const testVirtualNetwork = new azure.network.VirtualNetwork(vNetName,
          {
