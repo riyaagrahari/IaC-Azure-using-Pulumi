@@ -49,7 +49,7 @@ It will generate some project files in your current folder which are as follows:
 $ pulumi up
 ```
 ## License
-This project is licensed under the  License - see the [`LICENSE.md`](https://github.com/riyaagrahari/ARM-Templates/blob/master/LICENSE) file for details
+This project is licensed under the  License - see the [`LICENSE.md`](https://github.com/riyaagrahari/IaC-Azure-using-Pulumi/blob/master/LICENSE) file for details
 ## Author
 [`Riya Agrahari`](https://github.com/riyaagrahari/)<br />
 
