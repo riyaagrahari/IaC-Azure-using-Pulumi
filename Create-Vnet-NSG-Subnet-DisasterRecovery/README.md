@@ -89,7 +89,7 @@ Result of the deployed resources can be viewed on [`Pulumi`](https://app.pulumi.
 <p align="center">
 <img src="./Diagrams/Result.JPG">
 <br />
-    <b> Figure 1.1: Resource Graph of Resources Deployed dursing Testing </b>  
+    <b> Figure 1.4: Resource Graph of Resources Deployed dursing Testing </b>  
 </p>
 
 ## License
