@@ -84,7 +84,13 @@ After creating a new project and stack in Pulumi using ```pulumi new azure-javas
  ```bash
 $ pulumi up
 ```
-
+## Result
+Result of the deployed resources can be viewed on [`Pulumi`](https://app.pulumi.com)
+<p align="center">
+<img src="./Diagrams/Result.jpg" height="450" width="300">
+<br />
+    <b> Figure 1.1: Resource Graph of Resources Deployed </b>  
+</p>
 ## License
 This project is licensed under the  License - see the [`LICENSE.md`](https://github.com/riyaagrahari/ARM-Templates/blob/master/LICENSE) file for details
 ## Author
