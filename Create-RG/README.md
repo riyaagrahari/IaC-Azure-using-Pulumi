@@ -57,7 +57,7 @@ $ pulumi up
 - [`create-rg.js`](https://github.com/riyaagrahari/IaC-Azure-using-Pulumi/blob/master/Create-RG/create-rg.js) contains the logic for creation of a Resource Group in particular location
 - [`index.js`](https://github.com/riyaagrahari/IaC-Azure-using-Pulumi/blob/master/Create-RG/index.js) creates the object of Resource Group and calls [`create-rg`] using it.
 ## License
-This project is licensed under the  License - see the [`LICENSE.md`](https://github.com/riyaagrahari/ARM-Templates/blob/master/LICENSE) file for details
+This project is licensed under the  License - see the [`LICENSE.md`](https://github.com/riyaagrahari/IaC-Azure-using-Pulumi/blob/master/LICENSE) file for details
 ## Author
 [`Riya Agrahari`](https://github.com/riyaagrahari/)<br />
 
