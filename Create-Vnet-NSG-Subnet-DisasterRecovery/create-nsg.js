@@ -105,7 +105,7 @@ class NetworkSecurityGroup{
 							 sourcePortRange :  "8081" ,
 							 sourceAddressPrefix : subAddr1 ,
 							 destinationPortRange :  "8083" ,
-							 destinationAddressPrefix :   subAddr2  , 
+							 destinationAddressPrefix : subAddr2  , 
 							 access : "Allow" ,
 							 priority : 100,
 							 direction :  "Inbound", 
