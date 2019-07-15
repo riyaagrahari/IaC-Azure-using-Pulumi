@@ -10,7 +10,7 @@ class NetworkSecurityGroup{
 
     }
 
-    NetworkSecurityGroupWeb(nsgName,location,rgName,subAddr1,subAddr2,subAddr3,MgmtAddr,subAddr1Replica,subAddr2Replica,subAddr3Replica,MgmtAddrReplica)
+    NetworkSecurityGroupWeb(nsgName,location,rgName,subAddr1,subAddr2,subAddr3,MgmtAddr)
     {
         const nsgWeb = new azure.network.NetworkSecurityGroup(nsgName,
         {
@@ -28,7 +28,7 @@ class NetworkSecurityGroup{
 								 "80",
 								 "443" 
 							],
-							 destinationAddressPrefixes : [   subAddr1 ,  subAddr1Replica  ],
+							 destinationAddressPrefix : subAddr1 ,
 							 access :  "Allow" ,
 							 priority : 100,
 							 direction : "Inbound", 
@@ -38,12 +38,12 @@ class NetworkSecurityGroup{
 						 description :  "Rule for SSH and RDP Request",
 							 protocol :  "Tcp" ,
 							 sourcePortRange :  "*" ,
-							 sourceAddressPrefixes : [ MgmtAddr  , MgmtAddrReplica ],
+							 sourceAddressPrefix : MgmtAddr,
 							 destinationPortRanges : [
 								 "22" ,
 								 "3389" 
 							],
-							 destinationAddressPrefixes : [  subAddr1  ,   subAddr1Replica ],
+							 destinationAddressPrefix :subAddr1,
 							 access :  "Allow" ,
 							 priority : 110,
 							 direction :  "Inbound", 
@@ -53,9 +53,9 @@ class NetworkSecurityGroup{
                             description :  "Rule for accepting response from API-Web Server",
                                  protocol :  "Tcp" ,
                                  sourcePortRange :  "8083" ,
-                                 sourceAddressPrefixes : [  subAddr2  ,    subAddr2Replica ],
+                                 sourceAddressPrefix :   subAddr2  , 
                                  destinationPortRange :  "8081" ,
-                                 destinationAddressPrefixes : [  subAddr1  ,    subAddr1Replica ],
+                                 destinationAddressPrefix : [  subAddr1  ,     ],
                                  access :  "Allow" ,
                                  priority : 120,
                                  direction :  "Inbound", 
@@ -65,9 +65,9 @@ class NetworkSecurityGroup{
 						 description :  "Rule for denying Out-bound traffic to Database",
 						     protocol :  "Tcp" ,
 							 sourcePortRange :  "*" ,
-							 sourceAddressPrefixes :  [   subAddr1  ,   subAddr1Replica ] ,
+							 sourceAddressPrefix :  [   subAddr1  ,    ] ,
 							 destinationPortRange :  "*" ,
-							 destinationAddressPrefixes : [   subAddr3   ,   subAddr3Replica ],
+							 destinationAddressPrefix : [   subAddr3   ,     ],
 							 access :  "Deny" ,
 							 priority : 100,
 							 direction :  "Outbound", 
@@ -77,9 +77,9 @@ class NetworkSecurityGroup{
 						description :  "Rule for sending request from Web-API Server",
 							 protocol :  "Tcp" ,
 							 sourcePortRange :  "8081" ,
-							 sourceAddressPrefixes : [  subAddr1  ,    subAddr1Replica ],
+							 sourceAddressPrefix : subAddr1,
 							 destinationPortRange :  "8083" ,
-							 destinationAddressPrefixes : [  subAddr2  ,    subAddr2Replica ],
+							 destinationAddressPrefix : subAddr2, 
 							 access :  "Allow" ,
 							 priority : 110,
 							 direction :  "Outbound", 
@@ -90,7 +90,7 @@ class NetworkSecurityGroup{
           
     }
 
-    NetworkSecurityGroupApp(nsgName,location,rgName,subAddr1,subAddr2,subAddr3,MgmtAddr,subAddr1Replica,subAddr2Replica,subAddr3Replica,MgmtAddrReplica)
+    NetworkSecurityGroupApp(nsgName,location,rgName,subAddr1,subAddr2,subAddr3,MgmtAddr,subAddr1Replica,subAddr2Replica,subAddr3Replica,  )
     {
         const nsgApi = new azure.network.NetworkSecurityGroup(nsgName,
 		{
@@ -103,9 +103,9 @@ class NetworkSecurityGroup{
 						 description :  "Rule for accepting requests from WEB to API",
 							 protocol :  "Tcp",
 							 sourcePortRange :  "8081" ,
-							 sourceAddressPrefixes : [subAddr1 ,    subAddr1Replica ],
+							 sourceAddressPrefix : [subAddr1 ,     ],
 							 destinationPortRange :  "8083" ,
-							 destinationAddressPrefixes : [  subAddr2  ,    subAddr2Replica ],
+							 destinationAddressPrefix :   subAddr2  , 
 							 access : "Allow" ,
 							 priority : 100,
 							 direction :  "Inbound", 
@@ -115,12 +115,12 @@ class NetworkSecurityGroup{
 						 description :  "Rule for SSH and RDP Request to API",
 							 protocol :  "Tcp",
 							 sourcePortRange :  "*" ,
-							 sourceAddressPrefixes : [  MgmtAddr   ,  MgmtAddrReplica  ],
+							 sourceAddressPrefix : [  MgmtAddr   ,      ],
 							 destinationPortRanges : [
 								 "22" ,
 								 "3389" 
 							],
-							 destinationAddressPrefixes : [  subAddr2  ,    subAddr2Replica ],
+							 destinationAddressPrefix :   subAddr2  , 
                              priority : 110,
                              access : "Deny",
 							 direction :  "Inbound", 
@@ -130,9 +130,9 @@ class NetworkSecurityGroup{
 						 description :  "Rule for accepting FTP requests from Database to API server",
 							 protocol :  "Tcp",
 							 sourcePortRange : "*" ,
-							 sourceAddressPrefixes : [  subAddr3   ,  subAddr3Replica ],
+							 sourceAddressPrefix : [  subAddr3   ,    ],
 							 destinationPortRange :  "21" ,
-							 destinationAddressPrefixes : [  subAddr2  ,  subAddr2Replica ],
+							 destinationAddressPrefix : [  subAddr2  ,   ],
 							 access :  "Allow" ,
 							 priority : 120,
 							 direction :  "Inbound", 
@@ -142,9 +142,9 @@ class NetworkSecurityGroup{
 						 description :  "Rule for MySQL request",
 							 protocol :  "Tcp",
 							 sourcePortRange :  "118" ,
-							 sourceAddressPrefixes : [  subAddr2  ,  subAddr2Replica ],
+							 sourceAddressPrefix : [  subAddr2  ,   ],
 							 destinationPortRange :  "3306" ,
-							 destinationAddressPrefixes : [  subAddr3   ,  subAddr3Replica ],
+							 destinationAddressPrefix : [  subAddr3   ,    ],
 							 access :  "Allow" ,
 							 priority : 100,
 							 direction :  "Outbound", 
@@ -154,9 +154,9 @@ class NetworkSecurityGroup{
 						 description :  "Rule for sending response from API - WEB",
 							 protocol :  "Tcp",
 							 sourcePortRange :  "8081" ,
-							 sourceAddressPrefixes : [  subAddr2  ,  subAddr2Replica ],
+							 sourceAddressPrefix : [  subAddr2  ,   ],
 							 destinationPortRange :  "8083" ,
-							 destinationAddressPrefixes : [ subAddr1 ,  subAddr1Replica ],
+							 destinationAddressPrefix : [ subAddr1 ,   ],
 							 access :  "Allow" ,
 							 priority : 110,
 							 direction : "Outbound", 
@@ -167,9 +167,9 @@ class NetworkSecurityGroup{
 						 description :  "Rule for making FTP connection from API to Database server",
 							 protocol :  "Tcp" ,
 							 sourcePortRange :  "*" ,
-							 sourceAddressPrefixes : [  subAddr2  ,  subAddr2Replica ],
+							 sourceAddressPrefix : [  subAddr2  ,   ],
 							 destinationPortRange :  "21" ,
-							 destinationAddressPrefixes : [  subAddr3   ,  subAddr3Replica ],
+							 destinationAddressPrefix : [  subAddr3   ,    ],
 							 access :  "Allow" ,
 							 priority : 120,
 							 direction :  "Outbound" ,
@@ -179,7 +179,7 @@ class NetworkSecurityGroup{
             });
             return nsgApi;
         }
-        NetworkSecurityGroupDB(nsgName,location,rgName,subAddr1,subAddr2,subAddr3,MgmtAddr,subAddr1Replica,subAddr2Replica,subAddr3Replica,MgmtAddrReplica)
+        NetworkSecurityGroupDB(nsgName,location,rgName,subAddr1,subAddr2,subAddr3,MgmtAddr)
         {    
         const nsgDB = new azure.network.NetworkSecurityGroup(nsgName,
             {
@@ -192,9 +192,9 @@ class NetworkSecurityGroup{
 						 description :  "Rule for accepting MySQL request from API" ,
 							 protocol :  "Tcp" ,
 							 sourcePortRange :  "118" ,
-							 sourceAddressPrefixes : [  subAddr2  ,  subAddr2Replica ],
+							 sourceAddressPrefix : [  subAddr2  ,   ],
 							 destinationPortRange :  "3306" ,
-							 destinationAddressPrefixes : [  subAddr3   ,  subAddr3Replica ],
+							 destinationAddressPrefix : [  subAddr3   ,    ],
 							 access :  "Allow" ,
 							 priority : 100,
 							 direction :  "Inbound", 
@@ -205,8 +205,8 @@ class NetworkSecurityGroup{
 							 protocol :  "Tcp" ,
 							 sourcePortRange :  "*" ,
 							 destinationPortRange :  "*" ,
-							 sourceAddressPrefixes : [ subAddr1 ,  subAddr1Replica ],
-							 destinationAddressPrefixes : [  subAddr3   ,  subAddr3Replica ],
+							 sourceAddressPrefix : [ subAddr1 ,   ],
+							 destinationAddressPrefix : [  subAddr3   ,    ],
 							 access :  "Deny" ,
 							 priority : 110,
 							 direction :  "Inbound", 
@@ -217,12 +217,12 @@ class NetworkSecurityGroup{
 						 description :  "Rule for SSH Request" ,
 							 protocol :  "Tcp" ,
 							 sourcePortRange :  "*" ,
-							 sourceAddressPrefixes :[  MgmtAddr   ,  MgmtAddrReplica  ],
+							 sourceAddressPrefix :[  MgmtAddr   ,      ],
 							 destinationPortRanges : [
 								 "22" ,
 								 "3389" 
 							],
-							 destinationAddressPrefixes : [  subAddr3   ,  subAddr3Replica ],
+							 destinationAddressPrefix : [  subAddr3   ,    ],
 							 access :  "Allow" ,
 							 priority : 120,
 							 direction :  "Inbound", 
@@ -233,9 +233,9 @@ class NetworkSecurityGroup{
 						 description :  "Rule for accepting FTP connection from API to DB server" ,
 							 protocol :  "Tcp" ,
 							 sourcePortRange :  "*" ,
-							 sourceAddressPrefixes : [  subAddr2  ,  subAddr2Replica ],
+							 sourceAddressPrefix : [  subAddr2  ,   ],
 							 destinationPortRange :  "21" ,
-							 destinationAddressPrefixes : [  subAddr3   ,  subAddr3Replica ],
+							 destinationAddressPrefix : [  subAddr3   ,    ],
 							 access :  "Allow" ,
 							 priority : 130,
 							 direction :  "Inbound", 
@@ -245,9 +245,9 @@ class NetworkSecurityGroup{
 						 description :  "Rule for MySQL response to API-server" ,
 							 protocol :  "Tcp" ,
 							 sourcePortRange :  "3306" ,
-							 sourceAddressPrefixes :[  subAddr3   ,  subAddr3Replica ],
+							 sourceAddressPrefix :[  subAddr3   ,    ],
 							 destinationPortRange :  118 ,
-							 destinationAddressPrefixes : [  subAddr2  ,  subAddr2Replica ],
+							 destinationAddressPrefix : [  subAddr2  ,   ],
 							 access :  "Allow" ,
 							 priority : 100,
 							 direction :  "Outbound", 
@@ -257,9 +257,9 @@ class NetworkSecurityGroup{
 						 description :  "Rule for sesnding FTP connection from Database to API server" ,
 							 protocol :  "Tcp" ,
 							 sourcePortRange :  "*" ,
-							 sourceAddressPrefixes : [  subAddr3  ,  subAddr3Replica ],
+							 sourceAddressPrefix : [  subAddr3  ,    ],
 							 destinationPortRange :  21 ,
-							 destinationAddressPrefixes : [  subAddr2  ,  subAddr2Replica ],
+							 destinationAddressPrefix : [  subAddr2  ,   ],
 							 access :  "Allow" ,
 							 priority : 110,
 							 direction :  "Outbound",
