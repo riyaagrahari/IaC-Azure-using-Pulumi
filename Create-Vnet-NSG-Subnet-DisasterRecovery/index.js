@@ -46,19 +46,31 @@ let azureResourceGroup2 = new resourceGroup.ResourceGroup(rg2,location2);
 let nsgobj = new nsgCreate.NetworkSecurityGroup();
 // Create Primary Network Security Group
 let nsg = [];
+//remove this
 //creation of 3 NSG- web,api,db
 for(var i=1;i <= 3;i++)
-nsg[i] = nsgobj.NetworkSecurityGroupWeb("Nsg-Azure-Primary"+randomNumber+"-"+nsgNames[i-1],azureResourceGroup.location,azureResourceGroup.resourceGroupName,subnet1IP,subnet2IP,subnet3IP,ManagementJumpboxIP);
+nsg[i] = nsgobj.NetworkSecurityGroupWeb("Nsg-Azure-Primary"+randomNumber+"-"+nsgNames[i-1],
+azureResourceGroup.location,azureResourceGroup.resourceGroupName,subnet1IP,subnet2IP,subnet3IP,ManagementJumpboxIP);
+
 // Create Secondary Network Security Group
 let nsgReplica = []
 //creation of 3 NSG replica- web,api,db
 for(var i=1;i <= 3;i++)
-nsgReplica[i] = nsgobj.NetworkSecurityGroupWeb("Nsg-Azure-Secondary"+randomNumber+"-"+nsgNames[i-1],azureResourceGroup2.location,azureResourceGroup2.resourceGroupName,subnet1IPReplica,subnet2IPReplica,subnet3IPReplica,ManagementJumpboxIPReplica);
+nsgReplica[i] = nsgobj.NetworkSecurityGroupWeb("Nsg-Azure-Secondary"+randomNumber+"-"+nsgNames[i-1],
+azureResourceGroup2.location,azureResourceGroup2.resourceGroupName,subnet1IPReplica,subnet2IPReplica,
+subnet3IPReplica,ManagementJumpboxIPReplica);
 
 const vnetobj = new virtualNet.VirtualNetwork();
-const virtualnet = vnetobj.VirtualNetworkCreate(vnet1Name,azureResourceGroup.location,vnet1IP,azureResourceGroup.resourceGroupName,subnet1IP,subnet2IP,subnet3IP,ManagementJumpboxIP,FirewallIP,subnet1Name,subnet2Name,subnet3Name,ManagementJumpboxName,nsg[1].id,nsg[2].id,nsg[3].id);
-const virtualNetworkReplica = vnetobj.VirtualNetworkCreate(vnet2Name,azureResourceGroup2.location,vnet2IP,azureResourceGroup2.resourceGroupName,subnet1IPReplica,subnet2IPReplica,subnet3IPReplica,ManagementJumpboxIPReplica,FirewallIPReplica,subnet1NameReplica,subnet2NameReplica,subnet3NameReplica,ManagementJumpboxNameReplica,nsgReplica[1].id,nsgReplica[2].id,nsgReplica[3].id);
+const virtualnet = vnetobj.VirtualNetworkCreate(vnet1Name,azureResourceGroup.location,vnet1IP,
+    azureResourceGroup.resourceGroupName,subnet1IP,subnet2IP,subnet3IP,ManagementJumpboxIP,
+    FirewallIP,subnet1Name,subnet2Name,subnet3Name,ManagementJumpboxName,nsg[1].id,nsg[2].id,nsg[3].id);
+const virtualNetworkReplica = vnetobj.VirtualNetworkCreate(vnet2Name,azureResourceGroup2.location,
+    vnet2IP,azureResourceGroup2.resourceGroupName,subnet1IPReplica,subnet2IPReplica,subnet3IPReplica,
+    ManagementJumpboxIPReplica,FirewallIPReplica,subnet1NameReplica,subnet2NameReplica,subnet3NameReplica,
+    ManagementJumpboxNameReplica,nsgReplica[1].id,nsgReplica[2].id,nsgReplica[3].id);
 
 const peeringobj = new peering.VirtualNetworkPeering();
-const peeringConnection = peeringobj.VnetPeering(virtualnet.id,virtualnet.name,virtualNetworkReplica.id,virtualNetworkReplica.name,azureResourceGroup.resourceGroupName,azureResourceGroup2.resourceGroupName);
+const peeringConnection = peeringobj.VnetPeering(virtualnet.id,virtualnet.name,
+    virtualNetworkReplica.id,virtualNetworkReplica.name,azureResourceGroup.resourceGroupName,
+    azureResourceGroup2.resourceGroupName);
 
